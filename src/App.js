@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="wrapper">
       <Switch>
-        <Route path="/contacts" component={ContactsView} />
+        <Route exact path="/" component={ContactsView} />
         <Route path="/login" component={LoginView} />
         <Route path="/register" component={RegisterView} />
       </Switch>
