@@ -1,0 +1,132 @@
+.wrapper {
+  /* border-bottom-color: black; */
+  padding-bottom: 5px;
+}
+/* .register, */
+.login,
+.register {
+  position: relative;
+  text-decoration: none;
+  color: #9e9d9d;
+  font-size: 20px;
+  border: 1px solid currentColor;
+  border-bottom: none;
+  border-left: none;
+  width: 150px;
+  display: inline-block;
+  text-align: center;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+/* .link::after {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 10px;
+  border: 1px solid #9e9d9d;
+  border-left: 0;
+  right: -1px;
+  bottom: -4px;
+} */
+
+.registerActive,
+.loginActive {
+  color: black;
+  position: relative;
+  border: 1px solid currentColor;
+  border-bottom: 0;
+  position: relative;
+  -moz-border-radius: 6px 6px 0 0;
+  -webkit-border-radius: 6px 6px 0 0;
+  border-radius: 6px 6px 0 0;
+}
+
+.loginActive::before,
+.registerActive::after,
+.register::after {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 10px;
+  border: 1px solid currentColor;
+  border-left: 0;
+}
+
+.loginActive::before {
+  left: -1px;
+  bottom: -5px;
+}
+
+.register::after,
+.registerActive::after {
+  right: -1px;
+  bottom: -5px;
+}
+
+.loginActive::after {
+  content: '';
+  width: 152px;
+  height: 6px;
+  border: 1px solid black;
+  position: absolute;
+  bottom: -5px;
+  border-top: 0;
+  border-right: 0;
+  -moz-border-radius: 0 0 0 6px;
+  -webkit-border-radius: 0 0 0 6px;
+  border-radius: 0 0 0 6px;
+  right: -152px;
+}
+
+/* .activeLink:after,
+.activeLink:before,
+.register::before {
+  content: '';
+  width: 151px;
+  height: 6px;
+  border: 1px solid black;
+  position: absolute;
+  bottom: -5px;
+  border-top: 0;
+} */
+
+/* .activeLink:after {
+  width: 1px;
+  height: 10px;
+  border-left: 0;
+  -moz-border-radius: 0 0 5px 0;
+  -webkit-border-radius: 0 0 5px 0;
+  border-radius: 0 0 5px 0;
+  left: -1px;
+} */
+
+/* .activeLink:before {
+  border-right: 0;
+  -moz-border-radius: 0 0 0 6px;
+  -webkit-border-radius: 0 0 0 6px;
+  border-radius: 0 0 0 6px;
+  right: -151px;
+} */
+
+/* .register::before {
+  border-right: 0;
+  -moz-border-radius: 0 0 6px 0;
+  -webkit-border-radius: 0 0 6px 0;
+  border-radius: 0 0 6px 0;
+  left: -151px;
+} */
+
+/* .register::after {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 10px;
+  border: 1px solid black;
+  border-left: 0;
+  right: -1px;
+  bottom: -5px;
+} */

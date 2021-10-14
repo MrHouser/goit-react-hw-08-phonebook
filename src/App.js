@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { lazy, Suspense, useEffect } from 'react';
-// import { Redirect } from 'react-router';
+import { Redirect } from 'react-router';
 import { Switch } from 'react-router-dom';
 import { getLoading } from './redux/contacts/contacts-selectors';
 import authOperations from './redux/auth/auth-operations';
@@ -55,7 +55,7 @@ function App() {
             <PrivateRoute path="/contacts" redirectTo="/login">
               <ContactsView />
             </PrivateRoute>
-            {/* <Redirect to="login" /> */}
+            <Redirect to="login" />
           </Suspense>
         </Switch>
       )}

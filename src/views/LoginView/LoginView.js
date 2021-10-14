@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
 import AuthNav from '../../components/AuthNav/AuthNav';
-import UserMenu from '../../components/UserMenu/UserMenu';
 import authOperations from '../../redux/auth/auth-operations';
 import { getIsLoggedIn } from '../../redux/auth/auth-selectors';
+import s from './LoginView.module.css';
 
 const LoginView = () => {
   const dispatch = useDispatch();
@@ -35,34 +34,36 @@ const LoginView = () => {
   };
 
   return (
-    <>
-      <UserMenu />
-      <NavLink to="/contacts">Contacts</NavLink>
+    <div className="viewWrapper">
       {!isLoggedIn && <AuthNav />}
-      <form autoComplete="off" onSubmit={handleSubmit}>
-        <label>
-          Почта
+      <form autoComplete="off" onSubmit={handleSubmit} className={s.form}>
+        <label className={s.label}>
+          Email:
           <input
             type="email"
             name="email"
             value={email}
             onChange={handleChange}
+            className={s.input}
           />
         </label>
 
-        <label>
-          Пароль
+        <label className={`${s.label} ${s.mb}`}>
+          Password:
           <input
             type="password"
             name="password"
             value={password}
             onChange={handleChange}
+            className={s.input}
           />
         </label>
 
-        <button type="submit">Войти</button>
+        <button type="submit" className={s.button}>
+          Sign In
+        </button>
       </form>
-    </>
+    </div>
   );
 };
 export default LoginView;

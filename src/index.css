@@ -21,13 +21,15 @@ ul {
 }
 
 .wrapper {
+  position: relative;
   width: 500px;
   min-height: 600px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 40px;
-  padding: 20px;
+  padding: 24px;
   padding-left: 50px;
+  padding-right: 50px;
   background-image: url('https://i.stack.imgur.com/8zEoh.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -38,7 +40,7 @@ ul {
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 700;
-  font-size: 42px;
+  font-size: 38px;
   text-align: center;
 }
 
@@ -47,4 +49,30 @@ ul {
   font-size: 32px;
   margin-top: 30px;
   margin-bottom: 5px;
+}
+
+.viewWrapper {
+  width: 300px;
+  padding-top: 160px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.non-active {
+  position: relative;
+  border-right: none !important;
+  border-left: 1px solid #9e9d9d !important;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 0 !important;
+}
+
+.non-active::before {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 10px;
+  border: 1px solid #9e9d9d;
+  border-left: 0;
+  left: -1px;
+  bottom: -5px;
 }
